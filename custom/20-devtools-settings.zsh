@@ -27,6 +27,13 @@ else
   warn "mise command not found, skipping mise setup."
 fi
 
+## try
+if command -v try &> /dev/null; then
+  eval "$(ruby ~/.local/try.rb init ~/src/tries)"
+else
+  warn "ruby command not found, skipping tobi/try setup."
+fi
+
 ## ghcup
 source_if_exists ${HOME}/.ghcup/env
 
