@@ -10,3 +10,5 @@ alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r 
 alias http-serve='python3 -m http.server'
 alias vdiff="code --new-window --diff --wait"
 
+alias u="update_zsh_custom"
+
