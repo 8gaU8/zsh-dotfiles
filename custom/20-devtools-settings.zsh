@@ -2,6 +2,9 @@
 
 #* === update path ===
 
+## Homebrew
+add_to_path_if_exists "/opt/homebrew/bin"
+add_to_path_if_exists "/opt/homebrew/sbin"
 ## Add common user bin directories
 add_to_path_if_exists "${HOME}/.local/bin"
 ## LM Studio
@@ -11,24 +14,25 @@ add_to_path_if_exists "${HOME}/.antigravity/antigravity/bin"
 
 
 
+
 #* === Activations ===
 
 ## Homebrew
-if command -v brew &> /dev/null; then
+if command -v /opt/homebrew/bin/brew &> /dev/null; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 else
   warn "brew command not found, skipping brew setup."
 fi
 
 ## Mise
-if command -v mise &> /dev/null; then
+if command -v "${HOME}/.local/bin/mise" &> /dev/null; then
   eval "$(${HOME}/.local/bin/mise activate zsh)"
 else
   warn "mise command not found, skipping mise setup."
 fi
 
 ## try
-if command -v try &> /dev/null; then
+if command -v ruby &> /dev/null; then
   eval "$(ruby ~/.local/try.rb init ~/src/tries)"
 else
   warn "ruby command not found, skipping tobi/try setup."
