@@ -1,3 +1,6 @@
+# Zsh compiled files
+*.zwc
+
 # Ignore local setting files
 *-local.zsh
 example*
