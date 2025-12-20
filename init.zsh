@@ -23,7 +23,6 @@ plugins=(
 
 export LOGGER_LEVEL=4
 
-ZSH_THEME="robbyrussell"
 ZSH_THEME="ultima"
 
 # 名前で色を付けるようにする
@@ -42,10 +41,3 @@ export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 # autoload -U compinit && compinit -i
 
 source $ZSH/oh-my-zsh.sh
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/hagayuya/.lmstudio/bin"
-# End of LM Studio CLI section
-
-# Added by Antigravity
-export PATH="/Users/hagayuya/.antigravity/antigravity/bin:$PATH"
