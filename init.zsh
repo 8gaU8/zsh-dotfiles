@@ -3,11 +3,8 @@ export ZSH_CUSTOM="$HOME/zsh-dotfiles/custom"
 
 
 plugins=(
-    # git
-    #python
     zsh-autosuggestions
     zsh-syntax-highlighting
-    # docker
 )
 
 ZSH_THEME="ultima"
