@@ -1,8 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
 # Path to Customization
 export ZSH_CUSTOM="$HOME/zsh-dotfiles/custom"
@@ -37,5 +35,8 @@ ZSH_THEME="ultima"
 # ZSH_COMPDUMP=~/.cache/zsh/.zcompdump-${ZSH_VERSION}
 # compinit -d $ZSH_COMPDUMP
 # autoload -U compinit && compinit -i
+
+# Path to your Oh My Zsh installation.
+export ZSH="$(dirname $0)/oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
