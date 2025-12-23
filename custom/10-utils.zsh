@@ -37,8 +37,7 @@
             return 1
         fi
 
-        if [[ -d "$file" ]]; then
-            # PATHの先頭に追加
+        if [[ -f "$file" ]]; then
             source "$file"
         else
             warn "File not found. Skipping sourcing it: $file" 
