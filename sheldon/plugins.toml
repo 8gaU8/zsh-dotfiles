@@ -12,29 +12,34 @@
 
 shell = "zsh"
 
+[templates]
+defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
+
 [plugins]
 
-# For example:
-#
-# [plugins.base16]
-# github = "chriskempson/base16-shell"
-# 
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
-
+apply = ["defer"]
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 use = ["{{ name }}.zsh"]
+apply = ["defer"]
 
+[plugins.shell-logger]
+github = "rcmdnk/shell-logger"
+use = ["etc/shell-logger"]
 
 [plugins.ultima]
 github = "egorlem/ultima.zsh-theme"
 use = ["ultima.zsh-theme"]
-apply = ["source"]
+# apply = ["source"]
 
 [plugins.custom-plugins]
 local = "~/zsh-dotfiles/custom/"
 use = ["*.zsh"]
-apply = ["source"]
+# apply = ["source"]
