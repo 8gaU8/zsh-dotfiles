@@ -21,11 +21,20 @@ shell = "zsh"
 # 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
+use = ["{{ name }}.zsh"]
+
 
 [plugins.ultima]
 github = "egorlem/ultima.zsh-theme"
 use = ["ultima.zsh-theme"]
+apply = ["source"]
+
+[plugins.custom-plugins]
+local = "~/zsh-dotfiles/custom/"
+use = ["*.zsh"]
 apply = ["source"]
