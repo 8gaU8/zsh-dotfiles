@@ -22,6 +22,7 @@ add_to_path_if_exists "${HOME}/.cargo/bin"
 #* === Activations ===
 cached_activation /opt/homebrew/bin/brew shellenv
 cached_activation ruby ~/.local/try.rb init ~/src/tries
+cached_activation fzf --zsh
 
 ## ghcup
 source_if_exists ${HOME}/.ghcup/env
