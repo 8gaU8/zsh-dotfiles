@@ -45,19 +45,17 @@
         fi
     }
 
+    cached_completion_init(){
+        local cache_dir="${COMPLETION_CACHE_DIR}"
+        [[ ! -d "${cache_dir}" ]] && mkdir -p "${cache_dir}"
+    }
+
     cached_completion(){
         # usage: cached_completion <command> <completion generation command...>
         # example: cached_completion uv generate-shell-completion zsh
         local base_cmd="${1}"
         local commands="${*}"
-        local cache_dir="${HOME}/.cache/zsh_completion"
-        [[ ! -d "${cache_dir}" ]] && mkdir -p "${cache_dir}"
-        local cache_file="${cache_dir}/${base_cmd}.zsh"
-
-        if [[ -z "${base_cmd}" ]]; then
-            error "cached_completion: Command argument is required."
-            return 1
-        fi
+        local cache_file="${COMPLETION_CACHE_DIR}/_${base_cmd}"
 
         # check command existence
         if ! command -v ${base_cmd} &> /dev/null; then
@@ -67,12 +65,10 @@
 
         if [[ -f "${cache_file}" ]]; then
             info "Using cached completion for command: ${base_cmd}"
-            source "${cache_file}"
         else
             # キャッシュが存在しないか、古い場合は新たに生成
             info "Generating completion cache for command: ${base_cmd}"
             eval "${commands}" >| "${cache_file}"
-            source "${cache_file}"
         fi
 
     }

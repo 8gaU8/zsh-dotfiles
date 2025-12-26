@@ -10,5 +10,7 @@ plugins=(
 )
 
 ZSH_THEME="ultima"
+export COMPLETION_CACHE_DIR="${HOME}/.cache/zsh_completions"
+fpath+=("${COMPLETION_CACHE_DIR}")
 
 source $ZSH/oh-my-zsh.sh
