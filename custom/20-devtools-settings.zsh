@@ -34,6 +34,7 @@ source_if_exists ${HOME}/.cargo/env
 
 cached_completion _tailscale tailscale completion zsh
 cached_completion _uv uv generate-shell-completion zsh
+cached_completion _uvx uvx --generate-shell-completion=zsh
 cached_completion _gh gh completion -s zsh
 cached_completion _mise mise completion zsh
 cached_completion _pnpm pnpm completion zsh
