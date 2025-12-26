@@ -99,7 +99,7 @@
 
     cached_completion(){
         # usage: cached_completion <filename> <command> <completion generation command...>
-        # example: cached_completion _uv uv generate-shell-completion zsh
+        # example: cached_completion _tailscale tailscale completion zsh
         local filename="${1}"
         shift
         local base_cmd="${1}"
@@ -112,7 +112,7 @@
 
     cached_activation(){
         # usage: cached_activation <command> <activation generation command...>
-        # example: cached_activation fzf --zsh
+        # example: cached_activation /opt/homebrew/bin/brew shellenv
         local base_cmd="$(basename "${1}")"
         local commands="${*}"
         local cache_file="${ACTIVATE_CACHE_DIR:-${HOME}/.cache/zsh_activate}/${base_cmd}"
