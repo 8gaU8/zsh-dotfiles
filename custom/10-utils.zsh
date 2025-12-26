@@ -114,7 +114,7 @@
         # usage: cached_activation <command> <activation generation command...>
         # example: cached_activation /opt/homebrew/bin/brew shellenv
         local base_cmd="$(basename "${1}")"
-        local commands="${*}"
+        local commands="$*"
         local cache_file="${ACTIVATE_CACHE_DIR:-${HOME}/.cache/zsh_activate}/${base_cmd}"
 
         if _cached_eval "${cache_file}" "${base_cmd}" "${commands}" "activation"; then
