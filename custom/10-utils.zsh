@@ -95,9 +95,10 @@
     cached_activation(){
         # usage: cached_completion <command> <completion generation command...>
         # example: cached_completion uv generate-shell-completion zsh
-        local base_cmd="$(basename ${1})"
-        local commands="${*}"
-        local cache_file="${ACTIVATE_CACHE_DIR:-${HOME}/.cache/zsh_activate}/${base_cmd}"
+        local filename="${1}"
+        local base_cmd="${2}"
+        local commands="(${@[2,-1]})"
+        local cache_file="${ACTIVATE_CACHE_DIR}/${filename}"
 
         # check command existence
         if ! command -v ${base_cmd} &> /dev/null; then
