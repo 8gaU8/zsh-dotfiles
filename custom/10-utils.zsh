@@ -87,10 +87,10 @@
         fi
 
         if is_file_recent "${cache_file}" "${MAX_CACHE_AGE_SECONDS}"; then
-            info "Using cached ${cache_type} for command: ${base_cmd}"
+            info "Using cached ${cache_type} for command: ${base_cmd}" at "${cache_file}"
         else
             # キャッシュが存在しないか、古い場合は新たに生成
-            info "Generating ${cache_type} cache for command: ${base_cmd}"
+            info "Generating ${cache_type} cache for command: ${base_cmd}" at "${cache_file}"
             eval "${commands}" >| "${cache_file}"
         fi
 
@@ -101,18 +101,16 @@
         # usage: cached_completion <filename> <command> <completion generation command...>
         # example: cached_completion _tailscale tailscale completion zsh
         local filename="${1}"
-        shift
-        local base_cmd="${1}"
-        shift
-        local commands="$*"
+        local base_cmd="${2}"
+        local commands="(${@[2,-1]})"
         local cache_file="${COMPLETION_CACHE_DIR}/${filename}"
 
         _cached_eval "${cache_file}" "${base_cmd}" "${commands}" "completion"
     }
 
     cached_activation(){
-        # usage: cached_completion <command> <completion generation command...>
-        # example: cached_completion uv generate-shell-completion zsh
+        # usage: cached_activation <filename> <command> <activation command...>
+        # example: cached_activation _brew /opt/homebrew/bin/brew shellenv
         local filename="${1}"
         local base_cmd="${2}"
         local commands="(${@[2,-1]})"
