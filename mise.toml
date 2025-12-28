@@ -1,3 +1,10 @@
+[tasks.fmt]
+description = "Format TOML files"
+run = "taplo format"
+
 [tasks.clean]
 description = "Clean cache files"
 run = "rm -rf ~/.cache/zsh_* */**.zwc ./*.zwc"
+
+[tools]
+taplo = "latest"
