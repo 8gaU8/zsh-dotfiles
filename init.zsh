@@ -1,7 +1,11 @@
 #! /bin/zsh
 
 # Activate mise 
-eval "$(${HOME}/.local/bin/mise activate zsh)"
+if (( ${+VSCODE_INJECTION} )); then
+	eval "$(${HOME}/.local/bin/mise activate zsh --shims)"
+else
+	eval "$(${HOME}/.local/bin/mise activate zsh )"
+fi 
 
 # Setup cache directories for completions and activations
 export COMPLETION_CACHE_DIR="${HOME}/.cache/zsh_completions"
