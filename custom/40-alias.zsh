@@ -15,4 +15,3 @@ alias http-serve='python3 -m http.server'
 alias vdiff="code --new-window --diff --wait"
 
 alias u="update_zsh_custom"
-

@@ -16,9 +16,6 @@ add_to_path_if_exists "${HOME}/.antigravity/antigravity/bin"
 ## Rust
 add_to_path_if_exists "${HOME}/.cargo/bin"
 
-
-
-
 #* === Activations ===
 cached_activation _brew /opt/homebrew/bin/brew shellenv
 cached_activation _try ruby ~/.local/try.rb init ~/src/tries
@@ -48,8 +45,8 @@ cached_completion _cargo rustup completions zsh cargo
 export PIP_REQUIRE_VIRTUALENV=1
 
 # man: use bat as manpager
-if command -v bat &> /dev/null; then
-  export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
+if command -v bat &>/dev/null; then
+	export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
 else
-  warn "bat command not found, skipping manpager setup."
+	warn "bat command not found, skipping manpager setup."
 fi

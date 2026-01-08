@@ -12,6 +12,7 @@ description = "Clean cache files"
 run = "rm -rf ~/.cache/zsh_* */**.zwc ./*.zwc"
 
 [tools]
+shellcheck = "latest"
 shfmt = "latest"
 taplo = "latest"
 
