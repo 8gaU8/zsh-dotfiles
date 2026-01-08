@@ -23,12 +23,13 @@ github = "romkatv/zsh-defer"
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
-apply = ["defer"]
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 use = ["{{ name }}.zsh"]
-apply = ["defer"]
 
 [plugins.yous-should-use]
 github = "MichaelAquilina/zsh-you-should-use"
