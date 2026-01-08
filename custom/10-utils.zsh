@@ -116,8 +116,6 @@ cached_activation(){
     if _cached_eval "${cache_file}" "${base_cmd}" "${commands}" "activation"; then
         info "Sourcing activation cache for command: ${base_cmd}"
         source "${cache_file}"
-    else
-        error "Failed to source activation cache for command: ${base_cmd}"
     fi
 }
 
