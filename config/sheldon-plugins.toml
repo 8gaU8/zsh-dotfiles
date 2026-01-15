@@ -17,15 +17,13 @@ defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
 
 [plugins]
 
-[plugins.zsh-defer]
-github = "romkatv/zsh-defer"
+[plugins.autocomplete]
+github = "marlonrichert/zsh-autocomplete"
+use = ["zsh-autocomplete.plugin.zsh"]
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
-
-[plugins.zsh-completions]
-github = "zsh-users/zsh-completions"
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
@@ -39,14 +37,15 @@ use = ["you-should-use.plugin.zsh"]
 github = "rcmdnk/shell-logger"
 use = ["etc/shell-logger"]
 
-[plugins.ultima]
-github = "egorlem/ultima.zsh-theme"
-use = ["ultima.zsh-theme"]
+
+[plugins.brew]
+github = "ohmyzsh/ohmyzsh"
+use = ["plugins/brew/brew.plugin.zsh"]
 
 [plugins.custom-plugins]
 local = "~/dotfiles/custom/"
 use = ["*.zsh"]
 
-[plugins.brew]
-github = "ohmyzsh/ohmyzsh"
-use = ["plugins/brew/brew.plugin.zsh"]
+
+[plugins.starship]
+inline = 'eval "$(starship init zsh)"'
