@@ -5,6 +5,3 @@ disabled = false
 
 [os]
 disabled = false
-
-[hostname]
-ssh_symbol = "󰣀 "
