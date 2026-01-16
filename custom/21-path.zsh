@@ -1,0 +1,13 @@
+
+
+## Homebrew
+add_to_path_if_exists "/opt/homebrew/bin"
+add_to_path_if_exists "/opt/homebrew/sbin"
+## Add common user bin directories
+add_to_path_if_exists "${HOME}/.local/bin"
+## LM Studio
+add_to_path_if_exists "${HOME}/.lmstudio/bin"
+## Antigravity
+add_to_path_if_exists "${HOME}/.antigravity/antigravity/bin"
+## Rust
+add_to_path_if_exists "${HOME}/.cargo/bin"

@@ -45,7 +45,3 @@ use = ["plugins/brew/brew.plugin.zsh"]
 [plugins.custom-plugins]
 local = "~/dotfiles/custom/"
 use = ["*.zsh"]
-
-
-[plugins.starship]
-inline = 'eval "$(starship init zsh)"'

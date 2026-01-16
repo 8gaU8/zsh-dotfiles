@@ -1,8 +1,8 @@
 # check this repository if it's the latest version
 update_zsh_custom() {
 	(
-		cd "$ZSH_CUSTOM"
-		echo "Checking for updates in $ZSH_CUSTOM..."
+		cd "$DOTFILES_DIR"
+		echo "Checking for updates in ${DOTFILES_DIR}..."
 		if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
 			# Not a git repository, nothing to do.
 			exit
