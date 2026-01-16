@@ -1,12 +1,5 @@
 #! /bin/zsh
 
-# Activate mise 
-if (( ${+VSCODE_INJECTION} )); then
-	eval "$(${HOME}/.local/bin/mise activate zsh --shims)"
-else
-	eval "$(${HOME}/.local/bin/mise activate zsh )"
-fi 
-
 # Setup cache directories for completions and activations
 export COMPLETION_CACHE_DIR="${HOME}/.cache/zsh_completions"
 export ACTIVATE_CACHE_DIR="${HOME}/.cache/zsh_activations"
@@ -17,8 +10,17 @@ fpath+="${COMPLETION_CACHE_DIR}"
 # Custom Config Locations
 export DOTFILES_DIR="$(dirname $0)"
 export BASE_CONFIG_DIR="$(dirname $0)/config"
-export SHELDON_CONFIG_FILE="${BASE_CONFIG_DIR}/sheldon-plugins.toml"
+
+export MISE_GLOBAL_CONFIG_FILE="${BASE_CONFIG_DIR}/mise.toml"
 export STARSHIP_CONFIG="${BASE_CONFIG_DIR}/starship.toml"
+export SHELDON_CONFIG_FILE="${BASE_CONFIG_DIR}/sheldon-plugins.toml"
+
+# Activate mise 
+if (( ${+VSCODE_INJECTION} )); then
+	eval "$(${HOME}/.local/bin/mise activate zsh --shims)"
+else
+	eval "$(${HOME}/.local/bin/mise activate zsh )"
+fi 
 
 eval "$(sheldon source)"
 

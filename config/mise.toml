@@ -1,0 +1,24 @@
+[tools]
+act = "latest"
+aqua = "latest"
+bat = "latest"
+"cargo:cargo-machete" = "latest"
+"cargo:sheldon" = "latest"
+"cargo:tex-fmt" = "latest"
+deno = "latest"
+fzf = "latest"
+gemini-cli = "latest"
+gh = "latest"
+lazyssh = "latest"
+node = "24.12.0"
+pipx = "latest"
+pnpm = "latest"
+python = "latest"
+rust = "latest"
+usage = "latest"
+uv = "latest"
+watchexec = "latest"
+
+[settings]
+activate_aggressive = true
+color_theme = "catppuccin"
