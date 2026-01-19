@@ -19,6 +19,7 @@ starship = "latest"
 usage = "latest"
 uv = "latest"
 watchexec = "latest"
+zoxide = "latest"
 
 [settings]
 activate_aggressive = true
