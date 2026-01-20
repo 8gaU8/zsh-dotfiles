@@ -1,4 +1,4 @@
-#! /usr/bin/zsh
+#! /usr/bin/env zsh
 # example
 # $ add_to_path_if_exists "/usr/local/bin"
 # ディレクトリが存在する場合のみPATHに追加し、存在しない場合は警告を出す関数

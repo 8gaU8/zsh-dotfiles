@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /usr/bin/env zsh
 
 # Setup cache directories for completions and activations
 export MAX_CACHE_AGE_SECONDS=86400 # 1 day

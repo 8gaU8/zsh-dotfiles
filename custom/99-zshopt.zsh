@@ -1,3 +1,5 @@
+#! /usr/bin/env zsh
+
 setopt alwaystoend
 setopt autocd
 setopt autopushd

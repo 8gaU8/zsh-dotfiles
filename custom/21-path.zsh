@@ -1,4 +1,4 @@
-
+#! /usr/bin/env zsh
 
 ## Homebrew
 add_to_path_if_exists "/opt/homebrew/bin"

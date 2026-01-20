@@ -1,3 +1,5 @@
+#! /usr/bin/env zsh
+
 #* === initialize ===
 export ACTIVATE_CACHE_DIR="${HOME}/.cache/zsh_activations"
 

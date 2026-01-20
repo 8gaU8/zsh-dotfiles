@@ -1,3 +1,5 @@
+#! /usr/bin/env zsh
+
 ## ghcup
 source_if_exists ${HOME}/.ghcup/env
 

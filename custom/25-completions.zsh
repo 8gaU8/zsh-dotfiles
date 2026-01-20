@@ -1,3 +1,5 @@
+#! /usr/bin/env zsh
+
 #* === initialize ===
 export COMPLETION_CACHE_DIR="${HOME}/.cache/zsh_completions"
 fpath+="${COMPLETION_CACHE_DIR}"
