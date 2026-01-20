@@ -25,3 +25,4 @@ zoxide = "latest"
 [settings]
 activate_aggressive = true
 color_theme = "catppuccin"
+experimental = true

@@ -1,4 +1,6 @@
 #* === initialize ===
+export ACTIVATE_CACHE_DIR="${HOME}/.cache/zsh_activations"
+
 cached_activation_init
 
 #* === Activations ===

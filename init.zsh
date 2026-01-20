@@ -1,17 +1,14 @@
 #! /bin/zsh
 
 # Setup cache directories for completions and activations
-export COMPLETION_CACHE_DIR="${HOME}/.cache/zsh_completions"
-export ACTIVATE_CACHE_DIR="${HOME}/.cache/zsh_activations"
 export MAX_CACHE_AGE_SECONDS=86400 # 1 day
 
-fpath+="${COMPLETION_CACHE_DIR}"
 
 # Custom Config Locations
 export DOTFILES_DIR="$(dirname $0)"
 export BASE_CONFIG_DIR="$(dirname $0)/config"
 
-export MISE_GLOBAL_CONFIG_FILE="${BASE_CONFIG_DIR}/mise.toml"
+export MISE_GLOBAL_CONFIG_FILE="${BASE_CONFIG_DIR}/mise.global.toml"
 export STARSHIP_CONFIG="${BASE_CONFIG_DIR}/starship.toml"
 export SHELDON_CONFIG_FILE="${BASE_CONFIG_DIR}/sheldon-plugins.toml"
 
