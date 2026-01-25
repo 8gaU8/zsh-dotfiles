@@ -16,6 +16,9 @@ function ensure_zcompiled {
   fi
 }
 
-ensure_zcompiled "$(dirname $0)/init.zsh"
+ensure_zcompiled "$(dirname $0)/zshrc"
+
 source "$(dirname $0)/init.zsh"
+
+unfunction source
 
