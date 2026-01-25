@@ -17,6 +17,11 @@ defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"
 
 [plugins]
 
+[plugins.evalcache]
+github = "mroth/evalcache"
+use = ["evalcache.plugin.zsh"]
+apply = ["source", "fpath"]
+
 [plugins.autocomplete]
 github = "marlonrichert/zsh-autocomplete"
 use = ["zsh-autocomplete.plugin.zsh"]
@@ -36,7 +41,6 @@ use = ["you-should-use.plugin.zsh"]
 [plugins.shell-logger]
 github = "rcmdnk/shell-logger"
 use = ["etc/shell-logger"]
-
 
 [plugins.brew]
 github = "ohmyzsh/ohmyzsh"
