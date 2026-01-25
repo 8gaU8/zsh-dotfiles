@@ -19,6 +19,9 @@ else
 	eval "$(${HOME}/.local/bin/mise activate zsh )"
 fi 
 
+# ENV var for sheldon
+export SHELDON_PROFILE="$(uname)"
+
 eval "$(sheldon source)"
 
 autoload -Uz compinit && compinit
