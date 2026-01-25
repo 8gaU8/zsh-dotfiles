@@ -1,11 +1,6 @@
 #! /usr/bin/env zsh
 
-#* === initialize ===
-export COMPLETION_CACHE_DIR="${HOME}/.cache/zsh_completions"
 
-cached_completion_init
-
-#* === Completions ===
 on_demand_completion "tailscale" "tailscale completion zsh"
 on_demand_completion "uv" "uv generate-shell-completion zsh"
 on_demand_completion "uvx" "uvx --generate-shell-completion=zsh"
