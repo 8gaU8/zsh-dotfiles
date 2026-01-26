@@ -46,7 +46,3 @@ use = ["etc/shell-logger"]
 github = "ohmyzsh/ohmyzsh"
 profiles = ["Darwin"]
 use = ["plugins/brew/brew.plugin.zsh"]
-
-[plugins.custom-plugins]
-local = "~/dotfiles/custom/"
-use = ["*.zsh"]

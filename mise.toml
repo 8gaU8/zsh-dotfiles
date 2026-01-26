@@ -4,7 +4,7 @@ run = "taplo format"
 
 [tasks.clean]
 description = "Clean cache files"
-run = "rm -rf ~/.cache/zsh_* */**.zwc ./*.zwc ~/.zsh-evalcache"
+run = "rm -rf ~/.cache/zsh_* */**.zwc ./*.zwc ~/.zsh-evalcache ./custom.bundle.zsh"
 
 [tasks.reinstall]
 description = "Clean and reinstall all dependencies"
